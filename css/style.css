@@ -1,0 +1,210 @@
+@import url(https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css);
+html{font-size: 1em;}
+body,html,.wrapper{font-family: 'Lato',sans-serif; margin: 0; padding:0; height: 100%; min-height: 100%; width: 100%;}
+#wrapper{position: relative; font-size: 16px; color:#333; overflow-x: hidden;}
+
+/** Links, Buttons Etc. **/
+.wrapper a{text-decoration: none;}
+.btn{padding: 10px 20px; max-width: 200px; margin: 1.3em 0; color:#fff; background: #ef4b52; text-align: center; transition:0.3s all ease;border: 1px solid transparent;}
+.btn:hover{background:none; border:1px solid #ef4b52; color:#ef4b52;}
+.btn.secondary{background: none; color:#fff; border: 1px solid #fff;}
+.btn.secondary:hover{background:#fff; color:#105291;}
+
+/** Typography **/
+h1,h2,h3,h4{padding: 0; margin:0; font-weight: 300; margin-bottom: 15px;}
+.wrapper h1 {margin-top: 0;font-size: 5.063em;}
+.wrapper h2 {font-size: 3.375em;}
+.wrapper h3 {font-size: 2.25em;}
+.wrapper h4 {font-size: 1.5em; font-weight: 600;}
+.wrapper p{margin-bottom: 1.3em; display: block; line-height: 1.5em; font-size:1.1em;}
+small, .font_small {font-size: 0.667em;}
+
+@media all and (max-width:992px){
+.wrapper h1 {margin-top: 0;font-size: 4.063em;}
+.wrapper h2 {font-size: 2.375em;}
+.wrapper h3 {font-size: 1.25em;}
+
+}
+
+@media all and (max-width:667px){
+.wrapper h1 {margin-top: 0;font-size: 2.63em;}
+.wrapper h2 {font-size: 1.375em;}
+.wrapper h3 {font-size: 1.25em;}
+
+}
+
+/** Grid **/
+.go_row{display: block; margin: 0 auto; position: relative; zoom:1; max-width: 1024px;}
+.go_row.center{text-align: center;}
+.go_row:before,.go_row:after{content: ''; clear: both; display: table;}
+.col img{margin: 0 auto; width: 100%;}
+.col{float:left;}
+.col+.col{margin-left:1.6%;}
+.col-12{width: 100%;}
+.col-11{width: 91.5333333333%;}
+.col-10{width: 83.0666666667%;}
+.col-9{width: 74.6%;}
+.col-8{width: 66.1333333333%;}
+.col-7{width: 57.6666666667%;}
+.col-6{ width: 49.2%;}
+.col-5{ width: 40.7333333333%;}
+.col-4{width: 32.2666666667%;}
+.col-3{ width: 23.8%;}
+.col-2{width: 15.3333333333%;}
+.col-1{ width: 6.86666666667%;}
+.offset{float: right;}
+@media all and (max-width:979px){
+.go_row{width:90%; margin: 0 auto;}    
+.offset{float:none;}    
+.col-12,.col-11,.col-10,.col-9,.col-8,.col-7,.col-6,.col-5,.col-4,.col-3,.col-2,.col-1{float:none; width: auto; margin: 0;}  
+}
+
+
+
+/* Page Sections */
+.hero{
+ position: relative;
+ min-height: 100vh;    
+ height: 100%;
+ height: 100vh; 
+ max-height: 900px;    
+ background: url(/images/leaf-hero.jpg) no-repeat 50% 50%;
+ background-size: cover;
+ color:#fff;  
+ overflow: hidden;   
+}
+
+/** Hero Content **/
+.hero-content{
+padding: 0;
+display: table;
+height: 100%;
+width: 100%;    
+}
+
+.hero-content .go_row{
+ display: table-cell;
+ vertical-align: middle;   
+ height: 100%;    
+ z-index: 100;    
+}
+
+.hero-button-group{
+display: block;
+padding: 20px 0;
+}
+
+.hero-button-group .btn{
+ margin: 0 10px;
+}
+.hero-button-group .btn.primary:hover{background: #fff; border-color: transparent;}
+
+.hero:before,.hero:after{
+ content: '';
+ background: #fff;
+ height: 150px;
+ position: absolute;
+ bottom:-50px;
+ width:50%;    
+}
+
+.hero:before{
+ transform: skewY(5deg);
+ left:0;    
+}
+
+.hero:after{
+ transform: skewY(-5deg);
+ right:0; 
+}
+
+@media all and (max-width:992px){
+.hero{margin: 0; padding: 60px 0 75px; height: auto; min-height: 0; background-attachment: scroll;}
+.hero:before{display: none;}    
+.hero:after{width:100%; bottom:-120px; transform: skewY(-2.5deg);}    
+    
+/** Hero Content **/
+.hero-content,.hero-content .go_row{display: block; height: auto;}
+}
+
+@media all and (max-width:768px){
+.hero{padding: 60px 0 60px;}  
+/** Hero Content **/
+.hero-button-group .btn{display: block; margin: 10px auto 15px;}    
+    
+}
+
+/** Page Content **/
+.page-content{background: #fff; z-index: 200;}
+.page-section{padding: 40px 0; border-bottom: 1px solid #e5e5e5;}
+
+
+/** Fity Fity **/
+.fity-fity{
+display: block;
+position: relative;
+}
+.fity-fity:after{clear: both; content: ''; display: block;}
+ 
+.fity{width: 48%; padding:0 1%; float:left; background: #333; color:#f8f8f8;}
+
+.fity-content{padding: 80px 40px;}
+.fity.left{text-align: right;}
+.fity.right{text-align: left;}
+
+.fity.img{
+ padding: 0;
+ width: 50%; 
+ height: 100%;    
+ float: right;
+ background: url(http://www.fillmurray.com/960/960) no-repeat center center;
+ background-size: cover;    
+}
+
+@media all and (max-width:992px){.fity,.fity.left,.fity.right{float:none; width:100%; text-align: center;}}
+
+/** 4 Up with Icons **/
+.col .supporting-icon{
+ max-width:60px;
+ display: block;    
+ margin-bottom: 20px;    
+}
+
+/** Brands **/
+.brands{background: #e5e5e5; padding: 60px 0;}
+.brand-logos img{width:16.6667%; vertical-align: middle; float:left; height: 80px; display: block; margin: 0 auto 0px;}
+
+@media all and (max-width:768px){
+.brand-logos img{width:33.333%; height: auto;}
+}
+
+
+@media all and (max-width:480px){
+.brand-logos img{width:50%;}
+}
+
+/** Share **/
+.large-share{
+ padding: 40px 0;
+ background: url(https://static.pexels.com/photos/3368/person-smartphone-office-table-large.jpeg) no-repeat center center;
+ background-size: cover;
+ width: 100%;    
+}
+
+/** Feature Set **/
+.feature-set{padding: 40px 0;}
+.feature{position: relative;}
+.feature p{display: inline-block; padding-left: 70px; width:85%;}
+.feature img{
+ position: absolute;
+ display: inline-block;
+ width:60px;   
+ left:0px;    
+}
+
+@media all and (max-width:768px){
+.feature{border-bottom: 1px solid #e5e5e5; padding: 20px 0;}    
+.feature img{width: 40px; top:20%;}
+.feature p{padding-left: 50px; width:80%;}    
+}
